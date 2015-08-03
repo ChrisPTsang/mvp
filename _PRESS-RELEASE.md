@@ -18,27 +18,33 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
-
+  > Adopt a Pet
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-
+  > This product is for anyone looking to adopt a pet
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-
+  > This application will allow random generation of pets that are up for adoption with details of the pet.
+  > The focus will be on a single pet at a time, allowing open minded adopters to possibly stumble on a future best friend
+  > that they may not have considered otherwise.
 ## Problem ##
   > Describe the problem your product solves.
-
+  > This will help connect pets to loving homes
 ## Solution ##
   > Describe how your product elegantly solves the problem.
-
+  > A random generator/search mechanism will allow focus on a particular pet at a time without the clutter of the actual site.
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  > 'There are so many pets looking for a home, find your new best friend today!'
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  > Just click to find a new pet up for adoption along with all their information
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > 'It's always tough because I want to take them all home!'
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  > Adopt a pet today!
