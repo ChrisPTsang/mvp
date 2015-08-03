@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  margin-top: 10px;
+  font-family: arial, sans-serif;
+}
+
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  font-size: 60px;
+  color: #11B859;
+  margin-bottom: 20px;
+}
+
+h2,p {
+  margin: 50px;
+}
+
+#appcontainer {
+  margin: 50px;
+}
+
+.has-error {
+  border: 1px solid red;
+}
+
+.help-block {
+  color: red;
+}
+
+.photo.profile {
+  padding: 50px;
+}
+
+.nav-tabs {
+  color: #11B859;
+}
