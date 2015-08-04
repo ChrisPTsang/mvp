@@ -6,18 +6,13 @@ body {
 
 a:hover{
   text-decoration:none;
-  color: #11B859;
+  color: #EB9409;
 }
 
 a:visited
 {
   text-decoration:none;
-  color: #11B859;
-}
-
-p {
-  padding: 0 30px;
-  font-: 1em;
+  color: #EB9409;
 }
 
 h3 {
@@ -27,7 +22,7 @@ h3 {
 .logo {
   font-family: 'Londrina Shadow', cursive;
   font-size: 60px;
-  color: #11B859;
+  color: #EB9409;
   margin-bottom: 20px;
   text-decoration: none !important;
 }
@@ -53,9 +48,37 @@ h3 {
 }
 
 .nav-tabs {
-  color: #11B859;
+  color: #EB9409;
 }
 
 .btn {
   position: absolute;
+}
+
+.center {
+  margin: auto;
+  width: 30%;
+  padding: 10px 80px;
+}
+
+.grid-container {
+  margin: 50px;
+}
+
+.desc {
+  padding: 20px 50px;
+  font-size: 1em;
+  height: 200px;
+  overflow: scroll;
+  border: 1px;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
 }

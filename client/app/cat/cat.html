@@ -6,7 +6,7 @@
     <ul class="nav nav-tabs nav-justified">
       <li><a href='#/searchDog'>Adopt a Dog!</a></li>
       <li class="active"><a href='#/searchCat'>Adopt a Cat!</a></li>
-      <li><a href='#/search'>Advanced Search</a></li>
+      <li><a href='#/search'>Search by Location</a></li>
     </ul>
   </div>
   <div class="container-fluid">
@@ -14,7 +14,7 @@
       <div class='col-md-4 photo'>
         <div style="height: 305px">
           <carousel interval="myInterval" no-wrap="noWrapSlides">
-            <slide ng-repeat="slide in slides" active="slide.active">
+            <slide ng-repeat="slide in slides">
               <img ng-src="{{slide}}" style="margin:auto;">
               <div class="carousel-caption">
               </div>
@@ -27,7 +27,10 @@
         <h4>Breed: {{info.breed}}</h4>
         <h4>Location: {{info.loc}}</h4>
         <h4>Description</h4>
-        <p align='justify'>{{info.desc}}</p>
+        <div class='desc'>
+          <p align='justify'>{{info.desc}}</p>
+        </div>
+        <button type='submit' class='btn btn-success'>Contact Rescue Organization</button>
       </div>
     </div>
   </div>

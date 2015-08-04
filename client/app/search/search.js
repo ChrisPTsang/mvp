@@ -5,16 +5,27 @@ angular.module('adopt.search', [])
   $scope.info = {};
   $scope.info.breed = '';
 
+  $scope.searchResults = [];
+  //helper function to cut up array
+  var chunk = function(arr) {
+   var newArr = [];
+      for (var i=0; i<arr.length; i+=4) {
+          newArr.push(arr.slice(i, i+4));
+      }
+   return newArr;
+  };
+
   $scope.getPet = function(type){
     Pets.get(type).success(function(response) {
-      //api object variables
       $scope.data = angular.fromJson(response);
       $scope.info.name = $scope.data.petfinder.pet.name.$t;
       $scope.info.photo = $scope.data.petfinder.pet.media.photos.photo;
       $scope.info.desc = $scope.data.petfinder.pet.description.$t;
+      $scope.info.loc = $scope.data.petfinder.pet.contact.city.$t + ', ' + $scope.data.petfinder.pet.contact.state.$t;
 
       var breed = $scope.data.petfinder.pet.breeds.breed;
 
+      if(breed)
       if(Array.isArray(breed)){
         for(var i = 0; i < breed.length; i++) {
           if(i === 0) {
@@ -24,10 +35,18 @@ angular.module('adopt.search', [])
           }
         }
       } else {
-        // $scope.info.breed = 'Unknown';
+        $scope.info.breed = breed.$t;
       }
       console.log($scope.data);
       $scope.addSlide();
+    });
+  };
+
+  $scope.getPetByZip = function(zip){
+    Pets.getByZip(zip).success(function(response) {
+      $scope.data = angular.fromJson(response);
+      console.log($scope.data);
+      $scope.searchResults = chunk($scope.data.petfinder.pets.pet);
     });
   };
 
@@ -52,12 +71,15 @@ angular.module('adopt.search', [])
         $scope.$apply();
     }
   };
-  // $scope.$on('$routeChangeSuccess', function() {
+
+  
+  
+
+  $scope.$on('$routeChangeSuccess', function() {
     if($location.path() === '/searchDog') {
-      console.log('getting');
       $scope.getPet('dog');
     } else if($location.path() === '/searchCat') {
       $scope.getPet('cat');
     }
-  // });
+  });
 });
