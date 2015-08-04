@@ -1,18 +1,33 @@
-<div id='container' ng-controller="CatController">
+<div id='container' ng-controller="SearchController">
   <!-- Your html here -->
+  <button type="button" class="btn btn-default" ng-click="redirect('#/signout')">Logout</button>
+
   <div class='navbar navbar-default'>
     <ul class="nav nav-tabs nav-justified">
-      <li><a href='#/searchDog' class='index'>Adopt a Dog!</a></li>
-      <li class="active"><a href='#/searchCat' class='index' ng-click='getPet()'>Adopt a Cat!</a></li>
-      <!-- <li><a href='#/signin' class='logout'>Logout</a></li> -->
+      <li><a href='#/searchDog'>Adopt a Dog!</a></li>
+      <li class="active"><a href='#/searchCat'>Adopt a Cat!</a></li>
+      <li><a href='#/search'>Advanced Search</a></li>
     </ul>
   </div>
   <div class="container-fluid">
     <div class='row'>
-      <div class='col-md-4 photo'><img class="img-thumbnail" src={{info.photo}} width=500 height=500></div>
+      <div class='col-md-4 photo'>
+        <div style="height: 305px">
+          <carousel interval="myInterval" no-wrap="noWrapSlides">
+            <slide ng-repeat="slide in slides" active="slide.active">
+              <img ng-src="{{slide}}" style="margin:auto;">
+              <div class="carousel-caption">
+              </div>
+            </slide>
+          </carousel>
+        </div>
+      </div>  
       <div class='col-md-8 profile'>
         <h2>{{info.name}}</h2>
-        <p>{{info.desc}}</p>
+        <h4>Breed: {{info.breed}}</h4>
+        <h4>Location: {{info.loc}}</h4>
+        <h4>Description</h4>
+        <p align='justify'>{{info.desc}}</p>
       </div>
     </div>
   </div>

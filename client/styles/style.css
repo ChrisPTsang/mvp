@@ -4,15 +4,36 @@ body {
   font-family: arial, sans-serif;
 }
 
-h1 {
+a:hover{
+  text-decoration:none;
+  color: #11B859;
+}
+
+a:visited
+{
+  text-decoration:none;
+  color: #11B859;
+}
+
+p {
+  padding: 0 30px;
+  font-: 1em;
+}
+
+h3 {
+  text-align: center
+}
+
+.logo {
   font-family: 'Londrina Shadow', cursive;
   font-size: 60px;
   color: #11B859;
   margin-bottom: 20px;
+  text-decoration: none !important;
 }
 
-h2,p {
-  margin: 50px;
+.profile {
+  padding: 10px 50px;
 }
 
 #appcontainer {
@@ -33,4 +54,8 @@ h2,p {
 
 .nav-tabs {
   color: #11B859;
+}
+
+.btn {
+  position: absolute;
 }

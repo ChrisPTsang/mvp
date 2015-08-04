@@ -1,4 +1,4 @@
-var Link    = require('./petModel.js'),
+var List    = require('./petModel.js'),
     Q       = require('q'),
     util    = require('../config/utils.js');
 

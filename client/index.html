@@ -13,6 +13,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
     
     <!-- fonts -->
     <link href='http://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
@@ -25,16 +26,15 @@
   </head>
   <body>
     <div id='appcontainer' >
-      <h1>Adopt-a-Pet</h1>
+      <a class='logo' href='#/'>Adopt-a-Pet</a>
 
       <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
       <div ng-view></div>
 
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/angular-route/angular-route.js"></script>
-
-      <script src="app/dog/dog.js"></script>
-      <script src="app/cat/cat.js"></script>
+      <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+      <script src="app/search/search.js"></script>
       <script src="app/services/services.js"></script>
       <script src="app/app.js"></script>
     </div>
