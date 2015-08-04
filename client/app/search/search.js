@@ -50,6 +50,37 @@ angular.module('adopt.search', [])
     });
   };
 
+  $scope.getPetById = function(pet){
+    var id = pet.id.$t;
+    console.log(id);
+    Pets.getById(id).success(function(response) {
+      $scope.info = {};
+      $scope.data = angular.fromJson(response);
+      $scope.info.name = $scope.data.petfinder.pet.name.$t;
+      $scope.info.photo = $scope.data.petfinder.pet.media.photos.photo;
+      $scope.info.desc = $scope.data.petfinder.pet.description.$t;
+      $scope.info.loc = $scope.data.petfinder.pet.contact.city.$t + ', ' + $scope.data.petfinder.pet.contact.state.$t;
+
+      var breed = $scope.data.petfinder.pet.breeds.breed;
+
+
+      if(Array.isArray(breed)){
+        for(var i = 0; i < breed.length; i++) {
+          if(i === 0) {
+            $scope.info.breed += breed[i].$t;
+          } else {
+            $scope.info.breed += '/' + breed[i].$t;
+          }
+        }
+      } else {
+        $scope.info.breed = breed.$t;
+      }
+      $scope.slides = [];
+      $scope.addSlide();
+      $scope.openClose = true;
+    });
+  };
+
   //for carousel images
   $scope.myInterval = 3000;
   $scope.noWrapSlides = false;
@@ -71,9 +102,6 @@ angular.module('adopt.search', [])
         $scope.$apply();
     }
   };
-
-  
-  
 
   $scope.$on('$routeChangeSuccess', function() {
     if($location.path() === '/searchDog') {

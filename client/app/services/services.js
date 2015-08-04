@@ -8,6 +8,9 @@ angular.module('adopt.services', [])
     },
     getByZip: function(zip) {
       return $http.jsonp('http://api.petfinder.com/pet.find?key=66179b33176569544383ef84306d94d2&output=basic&count=100&format=json&location='+zip+'&callback=JSON_CALLBACK');
+    },
+    getById: function(id) {
+      return $http.jsonp('http://api.petfinder.com/pet.get?key=66179b33176569544383ef84306d94d2&format=json&id='+id+'&callback=JSON_CALLBACK');
     }
   };
 });

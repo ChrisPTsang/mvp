@@ -8,7 +8,35 @@
     </ul>
   </div>
   <!-- <h3>Find a new best friend!</h3> -->
-  
+  <div class="popup" ng-show="openClose">
+    <div class='popup-profile'>
+      <div class='row'>
+        <div class='col-md-4 photo'>
+          <div style="height: 5px">
+            <carousel interval="myInterval" no-wrap="noWrapSlides">
+              <slide ng-repeat="slide in slides">
+                <img ng-src="{{slide}}" style="margin:auto;" height='100'>
+                <div class="carousel-caption">
+                </div>
+              </slide>
+            </carousel>
+          </div>
+        </div>  
+        <div class='col-md-8 profile'>
+          <span class="glyphicon glyphicon-remove close" ng-click="openClose=false"></span>
+          <h2>{{info.name}}</h2>
+          <h4>Breed: {{info.breed}}</h4>
+          <h4>Location: {{info.loc}}</h4>
+          <h4>Description: </h4>
+          <div class='desc'>
+            <p align='justify'>{{info.desc}}</p>
+          </div>
+          <button type='submit' class='btn btn-success'>Contact Rescue Organization</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <form name="userForm" ng-submit="getPetByZip(zip)" class='form-inline center' novalidate>
     <div class="form-group">
       <input width="500" class='text form-control' required type='text' ng-model="zip" name='search' ng-class="{'has-error': userForm.search.$invalid && !userForm.search.$pristine}" ng-pattern='/(^\d{5}$)|(^\d{5}-\d{4}$)/' placeholder='Enter ZIP Code'>
@@ -25,10 +53,9 @@
   <div class='grid-container'>
     <div class="row" ng-repeat="chunk in searchResults">
         <div class='col-md-3 photo' ng-repeat="item in chunk">
-            <img ng-src="{{item.media.photos.photo[2].$t}}" width='300' height='300'>
+            <img ng-click="getPetById(item)"ng-src="{{item.media.photos.photo[2].$t}}" width='300' height='300'>
             <h3>{{item.name.$t}}</h3>
         </div>
     </div>
   </div>
-
 </div>

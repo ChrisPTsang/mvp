@@ -19,6 +19,10 @@ h3 {
   text-align: center
 }
 
+img {
+  border-radius: 5px;
+}
+
 .logo {
   font-family: 'Londrina Shadow', cursive;
   font-size: 60px;
@@ -81,4 +85,35 @@ h3 {
     border-radius: 4px;
     background-color: rgba(0,0,0,.5);
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+.popup {
+  opacity: 0.95;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: block;
+  z-index: 100;
+}
+
+.popup-profile {
+  width: 85%;
+  height: 80%;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  border: 1px solid #e9eaec;
+  border-radius: 8px;
+  top: 20%;
+  padding: 10px;
+}
+
+.close {
+  color: red;
+  position: relative;
+  top: 20px;
+  right: 50px;
 }
