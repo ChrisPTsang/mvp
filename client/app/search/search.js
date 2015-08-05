@@ -63,7 +63,6 @@ angular.module('adopt.search', [])
 
       var breed = $scope.data.petfinder.pet.breeds.breed;
 
-
       if(Array.isArray(breed)){
         for(var i = 0; i < breed.length; i++) {
           if(i === 0) {

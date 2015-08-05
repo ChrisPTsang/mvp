@@ -16,7 +16,12 @@ a:visited
 }
 
 h3 {
-  text-align: center
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h2,h4 {
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 img {
@@ -29,6 +34,7 @@ img {
   color: #EB9409;
   margin-bottom: 20px;
   text-decoration: none !important;
+  font-weight: bold;
 }
 
 .profile {
@@ -53,6 +59,7 @@ img {
 
 .nav-tabs {
   color: #EB9409;
+  font-family: 'Varela Round', sans-serif;
 }
 
 .btn {
@@ -70,11 +77,11 @@ img {
 }
 
 .desc {
-  padding: 20px 50px;
-  font-size: 1em;
+  padding: 20px 100px 20px 10px;
+  font-size: 18px;
   height: 200px;
   overflow: scroll;
-  border: 1px;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -116,4 +123,8 @@ img {
   position: relative;
   top: 20px;
   right: 50px;
+}
+
+.row {
+  margin-bottom: 30px;
 }

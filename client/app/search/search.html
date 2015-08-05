@@ -24,7 +24,7 @@
         </div>  
         <div class='col-md-8 profile'>
           <span class="glyphicon glyphicon-remove close" ng-click="openClose=false"></span>
-          <h2>{{info.name}}</h2>
+          <h1>{{info.name}}</h1>
           <h4>Breed: {{info.breed}}</h4>
           <h4>Location: {{info.loc}}</h4>
           <h4>Description: </h4>
@@ -43,6 +43,11 @@
     </div>
     <button type='submit' class='btn btn-default' ng-disabled="userForm.$invalid">Submit</button>
     <p ng-show="userForm.search.$invalid && !userForm.search.$pristine" class="help-block">Not a valid ZIP Code</p>
+<!-- 
+    <div class="form-group">
+      <input width="500" class='text form-control' required type='text' ng-model="query" name='query' placeholder='Enter ZIP Code'>
+    </div>
+    <button type='submit' class='btn btn-default' ng-disabled="userForm.$invalid">Filter</button> -->
   </form>
 
 <!--   <div class="form-group input-group col-sm-2">
@@ -52,7 +57,7 @@
 
   <div class='grid-container'>
     <div class="row" ng-repeat="chunk in searchResults">
-        <div class='col-md-3 photo' ng-repeat="item in chunk">
+        <div class='col-md-3 photo' ng-repeat="item in chunk | filter: search">
             <img ng-click="getPetById(item)"ng-src="{{item.media.photos.photo[2].$t}}" width='300' height='300'>
             <h3>{{item.name.$t}}</h3>
         </div>
