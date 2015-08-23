@@ -1,15 +1,16 @@
 {
-  "name": "petMatcher",
+  "name": "Adopt-a-Pet",
   "version": "0.0.1",
-  "description": "petMatcher using express",
+  "description": "Adopt-a-Pet using express",
   "main": "app.js",
   "repository": "",
   "license": "Proprietary",
   "private": true,
   "scripts": {
-    "start": "./node_modules/.bin/nodemon --ignore node_modules /server/server.js"
+    "start": "./node_modules/.bin/nodemon --ignore node_modules /server/server.js",
+    "postinstall": "bower install"
    },
-  "author": "",
+  "author": "Chris Tsang",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^1.5.7",
