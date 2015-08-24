@@ -4,14 +4,13 @@
   "description": "Adopt-a-Pet using express",
   "main": "app.js",
   "repository": "",
-  "license": "Proprietary",
+  "license": "ISC",
   "private": true,
   "scripts": {
-    "start": "./node_modules/.bin/nodemon --ignore node_modules /server/server.js",
+    "start": "node ./server/server.js",
     "postinstall": "bower install"
-   },
+  },
   "author": "Chris Tsang",
-  "license": "ISC",
   "devDependencies": {
     "browser-sync": "^1.5.7",
     "clone-stats": "0.0.1",
@@ -37,6 +36,7 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.4.3",
+    "bower": "^1.5.1",
     "express": "^4.4.5",
     "jwt-simple": "^0.2.0",
     "mongoose": "^4.1.0",

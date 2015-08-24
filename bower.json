@@ -1,0 +1,22 @@
+{
+  "name": "2015-06-mvp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ChrisPTsang/2015-06-mvp",
+  "authors": [
+    "Chris Tsang <chris.p.tsang@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/lib"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-route": "~1.4.4",
+    "angular-mocks": "~1.4.4",
+    "angular-bootstrap": "~0.13.3",
+    "jquery": "~2.1.4"
+  }
+}
